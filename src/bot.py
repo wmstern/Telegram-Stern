@@ -38,7 +38,7 @@ async def HelpCommand(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
     await update.message.reply_text("Commands:\n\n/help\n/start\n/test")
 
 async def TestCommand(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.message.reply_text(f'Tested by: {update.effective_user)
+    await update.message.reply_text(f"Tested by: {update.effective_user}")
 
 def main() -> None:
     """Run bot."""
