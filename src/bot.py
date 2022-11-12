@@ -1,6 +1,12 @@
 import os
-from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+from telegram import (
+    Update
+)
+from telegram.ext import (
+    ApplicationBuilder,
+    CommandHandler,
+    ContextTypes
+)
 
 
 async def TestCommand(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
