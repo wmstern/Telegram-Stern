@@ -30,7 +30,7 @@ logger = logging.getLogger(__name__)
 
 async def StartCommand(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_html(
-        rf"Hi {user.mention_html()}!\n\nCommands:\n\n/help\n/start\n/test",
+        rf"Hi {update.effective_user.mention_html()}!\n\nCommands:\n\n/help\n/start\n/test",
         reply_markup=ForceReply(selective=True)
     )
 
