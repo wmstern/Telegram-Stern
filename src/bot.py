@@ -30,15 +30,15 @@ logger = logging.getLogger(__name__)
 
 async def StartCommand(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
-        rf"Hi {user.mention_html()}!\n\nHelpCommand(update, context)",
+        rf"Hi {user.mention_html()}!\n\nCommands:\n\n/help\n/start\n/test",
         reply_markup=ForceReply(selective=True)
     )
 
+async def HelpCommand(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    await update.message.reply_text("Commands:\n\n/help\n/start\n/test")
+
 async def TestCommand(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_html(f'Tested by: {update.effective_user)
-
-async def HelpCommand(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.message.reply_text("Commands:\n\n/test")
 
 def main() -> None:
     """Run bot."""
