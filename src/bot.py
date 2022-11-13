@@ -31,12 +31,14 @@ logger = logging.getLogger(__name__)
 
 async def StartCommand(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_html(
-        rf"Hi {update.effective_user.mention_html()}!\n\nCommands:\n\n/help\n/start\n/test",
+        rf"Hi {update.effective_user.mention_html()}!",
         reply_markup=ForceReply(selective=True)
     )
 
+    await update.message.reply_text("Commands:\n\n- /help\n- /start\n- /test")
+
 async def HelpCommand(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.message.reply_text("Commands:\n\n/help\n/start\n/test")
+    await update.message.reply_text("Commands:\n\n- /help\n- /start\n- /test")
 
 async def TestCommand(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(f"Tested by: {update.effective_user.first_name}")
