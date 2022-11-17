@@ -3,7 +3,9 @@ Informartion
 
 Hi, this is a telegram bot made in python and unloaded on heroku.
 
+</br>
+
 License
 ========
 
-Apache License 2.0, for more information go to the file "LICENSE".
+MIT License, for more information go to the file "LICENSE".
